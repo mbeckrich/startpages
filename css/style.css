@@ -3,22 +3,26 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-x: hidden;
+  display: flex;
+  height: 100%;
 }
 
 :root {
   font-size: 16px;
   --black-text: hsl(264.7, 10.1%, 33.1%);
-  --links: hsla(70, 80%, 80%, 0.8);
+  --links: hsl(148.6, 100%, 75%);
 }
 
 body {
   background-color: hsla(247, 100%, 100%, 65%);
   color: var(--black-text);
-  font-family: 'Mononoki Nerd Font Mono';
+  font-family: 'iA Writer Duospace', 'Gill Sans';
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 4rem 3rem 3rem 10rem;
 }
 
 a {
-  color: blue;
+  color: var(--black-text);
   text-decoration: none;
   border-bottom: 2px solid var(--links);
   transition: color 0.12s ease, border-color 0.12s ease,
@@ -28,14 +32,19 @@ a {
 a:hover,
 a:focus {
   border-color: transparent;
+  font-weight: bold;
 }
 
 h1 {
   font-size: 2rem;
 }
 
-title::after {
-  font-family: 'Font Awesome';
-  font-weight: 900;
-  content: '\f6e2';
+h2 {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+}
+
+li {
+  list-style: none;
 }
