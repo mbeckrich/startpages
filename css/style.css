@@ -1,0 +1,41 @@
+html {
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  font-size: 16px;
+  --black-text: hsl(264.7, 10.1%, 33.1%);
+  --links: hsla(70, 80%, 80%, 0.8);
+}
+
+body {
+  background-color: hsla(247, 100%, 100%, 65%);
+  color: var(--black-text);
+  font-family: 'Mononoki Nerd Font Mono';
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 2px solid var(--links);
+  transition: color 0.12s ease, border-color 0.12s ease,
+    outline-color 0.12s ease, outline-style 0.12s ease;
+}
+
+a:hover,
+a:focus {
+  border-color: transparent;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+title::after {
+  font-family: 'Font Awesome';
+  font-weight: 900;
+  content: '\f6e2';
+}
