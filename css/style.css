@@ -5,7 +5,6 @@ html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  
 }
 
 :root {
@@ -20,28 +19,37 @@ body {
   font-family: 'iA Writer Duospace', 'Gill Sans';
   height: 100%;
   width: 100%;
+  justify-content: center;
+  align-content: center;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 header {
   grid-column: 1 / 13;
-  grid-row: 1;
+  grid-row: 5;
 }
 
 .left-side {
   grid-column: 1 / 6;
-  grid-row: 2;
+  grid-row: 6;
+  padding-right: end;
+  border-right: solid 1px var(--links);
+  justify-self: stretch;
 }
 
 .right-side {
-  grid-column: 7 / 13;
-  grid-row: 2;
+  grid-column: 6 / 13;
+  grid-row: 6;
+  justify-self: start;
 }
 
 a {
@@ -69,4 +77,8 @@ h2 {
 
 li {
   list-style: none;
+}
+
+ul {
+  white-space: nowrap;
 }
