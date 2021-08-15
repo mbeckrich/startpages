@@ -12,10 +12,11 @@ html {
   --black-text: hsl(264.7, 10.1%, 33.1%);
   --links: hsl(247, 100%, 85%);
   --border-color: hsla(247, 100%, 85%, .2);
+  --forms: hsla(264.7, 10.1%, 33.1%, .5);
 }
 
 body {
-  background-color: hsla(90.6,27.4%,64.9%, .3);
+  background-color: hsla(90.6, 27.4%, 64.9%, .3);
   color: var(--black-text);
   font-family: 'iA Writer Duospace', 'Gill Sans';
   height: 100%;
@@ -32,7 +33,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 15vh;
-  box-shadow:  1px 1px 6px var(--border-color);
+  box-shadow: 1px 1px 6px var(--border-color);
   padding: 2rem;
   background-color: hsla(247, 99%, 99%, .8);
 }
@@ -59,7 +60,7 @@ header {
 }
 
 footer {
-  grid-column: 1 / 13;
+  grid-column: 1 / 12;
   grid-row: 9;
 }
 
@@ -92,4 +93,33 @@ li {
 
 ul {
   white-space: nowrap;
+}
+
+i {
+  font-size: 1.2vw;
+  color: var(--links);
+  text-shadow: 1px .2px var(--border-color);
+}
+
+.formsearch::placeholder {
+  font: 1rem "iA Writer Duospace,""Gill Sans";
+  color: var(--forms);
+}
+
+.formsearch:focus {
+  outline: none;
+}
+
+.formsearch {
+  font-size: 1vw;
+  padding: 10px;
+  width: 90%;
+  box-shadow: 1px 1px 6px var(--border-color);
+  border: 0;
+  
+}
+
+.searchbar button {
+  position: relative;
+  left: 1%;
 }
