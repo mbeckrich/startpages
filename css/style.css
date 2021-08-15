@@ -10,7 +10,7 @@ html {
 :root {
   font-size: 16px;
   --black-text: hsl(264.7, 10.1%, 33.1%);
-  --links: hsl(247, 100%, 85%);
+  --links: hsl(247, 90%, 85%);
   --border-color: hsla(247, 100%, 85%, .2);
   --forms: hsla(264.7, 10.1%, 33.1%, .5);
 }
@@ -21,46 +21,47 @@ body {
   font-family: 'iA Writer Duospace', 'Gill Sans';
   height: 100%;
   width: 100%;
-  justify-content: center;
-  align-content: center;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12);
-  grid-gap: 1rem;
+  grid-template-columns: 12fr;
+  grid-gap: 1.2rem;
   width: 50vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15vh;
-  box-shadow: 1px 1px 6px var(--border-color);
-  padding: 2rem;
+  box-shadow: 3px 3px 6px var(--border-color);
+  padding: .1rem 2rem 2rem 2rem;
   background-color: hsla(247, 99%, 99%, .8);
 }
 
 
 header {
-  grid-column: 1 / 13;
+  grid-column: 1 / 11;
   grid-row: 4;
   font-size: 1.8rem;
 }
 
 .left-side {
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 6;
-  justify-self: stretch;
+}
+
+.left-middle-side {
+  grid-column: 3 / 4;
+  grid-row: 6;
 }
 
 .right-side {
-  grid-column: 4 / 8;
+  grid-column: 5 / 6;
   grid-row: 6;
-  justify-self: center;
   border-left: solid 2px var(--border-color);
   padding-left: 2rem;
 }
 
 footer {
-  grid-column: 1 / 12;
+  grid-column: 1 / 7;
   grid-row: 9;
 }
 
@@ -74,7 +75,7 @@ a {
 a:hover,
 a:focus {
   border-color: transparent;
-  font-weight: bold;
+  color: var(--links);
 }
 
 h2 {
@@ -96,13 +97,21 @@ ul {
 }
 
 i {
-  font-size: 1.2vw;
+  font-size: 1rem;
+  color: var(--black-text);
+  border-bottom: 2px solid var(--links);
+  padding-bottom: .3rem;
+}
+
+i:hover,
+i:focus {
+  border-color: transparent;
   color: var(--links);
-  text-shadow: 1px .2px var(--border-color);
 }
 
 .formsearch::placeholder {
-  font: 1rem "iA Writer Duospace,""Gill Sans";
+  font-family: "iA Writer Duospace", "Gill Sans";
+  font-size: 1rem;
   color: var(--forms);
 }
 
@@ -111,7 +120,7 @@ i {
 }
 
 .formsearch {
-  font-size: 1vw;
+  font-size: 1.1rem;
   padding: 10px;
   width: 90%;
   box-shadow: 1px 1px 6px var(--border-color);
@@ -121,5 +130,7 @@ i {
 
 .searchbar button {
   position: relative;
-  left: 1%;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
