@@ -11,10 +11,11 @@ html {
   font-size: 16px;
   --black-text: hsl(264.7, 10.1%, 33.1%);
   --links: hsl(247, 100%, 85%);
+  --border-color: hsla(247, 100%, 85%, .2);
 }
 
 body {
-  background-color: hsla(247, 100%, 100%, 65%);
+  background-color: hsla(90.6,27.4%,64.9%, .3);
   color: var(--black-text);
   font-family: 'iA Writer Duospace', 'Gill Sans';
   height: 100%;
@@ -25,31 +26,41 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12);
   grid-gap: 1rem;
-  width: 70vw;
+  width: 50vw;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15vh;
+  box-shadow:  1px 1px 6px var(--border-color);
+  padding: 2rem;
+  background-color: hsla(247, 99%, 99%, .8);
 }
 
 
 header {
   grid-column: 1 / 13;
-  grid-row: 5;
+  grid-row: 4;
+  font-size: 1.8rem;
 }
 
 .left-side {
-  grid-column: 1 / 6;
+  grid-column: 1 / 4;
   grid-row: 6;
-  padding-right: end;
-  border-right: solid 1px var(--links);
   justify-self: stretch;
 }
 
 .right-side {
-  grid-column: 6 / 13;
+  grid-column: 4 / 8;
   grid-row: 6;
-  justify-self: start;
+  justify-self: center;
+  border-left: solid 2px var(--border-color);
+  padding-left: 2rem;
+}
+
+footer {
+  grid-column: 1 / 13;
+  grid-row: 9;
 }
 
 a {
@@ -65,14 +76,14 @@ a:focus {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 2rem;
+h2 {
+  font-size: 1.2rem;
+  font-variant: all-small-caps;
+  margin-bottom: 0.2rem;
 }
 
-h2 {
-  margin-bottom: 0.2rem;
-  font-size: 1.2rem;
-  font-variant: small-caps;
+h2:first-child {
+  margin-top: 0;
 }
 
 li {
