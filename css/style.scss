@@ -1,0 +1,83 @@
+$font-headers: 'Mononoki Nerd Font Mono', Menlo, 'Gill Sans', 'Segui UI';
+$font-body: 'Mononoki Nerd Font Mono', Menlo, 'Gill Sans', 'Segui UI';
+$font-color-body: hsl(173.2, 55%, 63.3%);
+$font-size-body: 1.25rem;
+$font-color-link: hsla(135.3, 65%, 76.7%, 1);
+$border-color: hsl(173.2, 95%, 80%);
+$background-color: hsla(180, 15%, 1%, 0.85);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $background-color;
+    color: $font-color-body;
+    height: min(8vh, 3rem);
+    margin-top: min(8vh, 3rem);
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 1.5rem clamp(1rem, 5%, 2rem);
+}
+
+.left-col {
+    width: min(60ch, 100% - 2rem);
+    font-family: $font-body;
+    padding: max(1%, 1rem);
+}
+
+.left-col {
+    header {
+        font-size: clamp(2.5rem, 6vw + 2rem, 3rem);
+        margin-bottom: 2rem;
+        font-family: $font-headers;
+    }
+}
+
+.left-col {
+    nav,
+    h2.left-h {
+        display: inline-flex;
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+}
+
+h2.left-h {
+    margin-bottom: 0.8rem;
+}
+
+a {
+    color: $font-color-link;
+    padding-left: 2rem;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    color: hsl(45.1, 95%, 80%);
+    text-decoration: none;
+}
+
+.right-col {
+    padding: max(1%, 1rem);
+}
+
+.right-col > img {
+    box-shadow: 0 0 20px $background-color;
+}
+
+@media (max-width: 1100px) {
+    .main {
+        display: inline-block;
+    }
+    .left-col {
+        margin-bottom: 2rem;
+    }
+}
