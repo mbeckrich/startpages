@@ -21,7 +21,6 @@ body {
 .left-col {
   width: min(60ch, 100% - 2rem);
   font-family: "Mononoki Nerd Font Mono", Menlo, "Gill Sans", "Segui UI";
-  padding: max(1%, 1rem);
 }
 
 .left-col header {
@@ -31,13 +30,18 @@ body {
 }
 
 .left-col nav,
-.left-col h2.left-h {
+.left-col h2.social {
   display: inline-flex;
   flex-direction: column;
   padding-left: 1rem;
 }
 
-h2.left-h {
+h2.social {
+  margin-bottom: 0.8rem;
+}
+
+h2.news {
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
 }
 
@@ -53,12 +57,50 @@ a:hover {
   text-decoration: none;
 }
 
-.right-col {
-  padding: max(1%, 1rem);
-}
-
 .right-col > img {
   box-shadow: 0 0 20px rgba(2, 3, 3, 0.85);
+}
+
+i {
+  font-size: 1rem;
+  padding: 0.2rem;
+  color: rgba(2, 3, 3, 0.85);
+  border-bottom: 2px solid #9cfcf1;
+}
+
+i:hover,
+i:focus {
+  border-color: transparent;
+  color: #9deab1;
+}
+
+.formsearch::placeholder {
+  font-family: "Gill Sans";
+  font-size: 1rem;
+  color: rgba(2, 3, 3, 0.85);
+}
+
+.formsearch:focus {
+  outline: none;
+}
+
+#googleValue {
+  border: 2px solid #9cfcf1;
+}
+
+.formsearch {
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.searchbar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  justify-content: center;
+  padding-right: 0.5rem;
 }
 
 @media (max-width: 1100px) {

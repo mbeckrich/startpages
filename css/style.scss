@@ -29,7 +29,6 @@ body {
 .left-col {
     width: min(60ch, 100% - 2rem);
     font-family: $font-body;
-    padding: max(1%, 1rem);
 }
 
 .left-col {
@@ -42,14 +41,19 @@ body {
 
 .left-col {
     nav,
-    h2.left-h {
+    h2.social {
         display: inline-flex;
         flex-direction: column;
         padding-left: 1rem;
     }
 }
 
-h2.left-h {
+h2.social {
+    margin-bottom: 0.8rem;
+}
+
+h2.news {
+    margin-top: 1rem;
     margin-bottom: 0.8rem;
 }
 
@@ -65,12 +69,49 @@ a:hover {
     text-decoration: none;
 }
 
-.right-col {
-    padding: max(1%, 1rem);
-}
-
 .right-col > img {
     box-shadow: 0 0 20px $background-color;
+}
+
+i {
+    font-size: 1rem;
+    padding: 0.2rem;
+    color: $background-color;
+    border-bottom: 2px solid $border-color;
+}
+
+i:hover,
+i:focus {
+    border-color: transparent;
+    color: $font-color-link;
+}
+
+.formsearch::placeholder {
+    font-family: 'Gill Sans';
+    font-size: 1rem;
+    color: $background-color;
+}
+
+.formsearch:focus {
+    outline: none;
+}
+
+#googleValue {
+    border: 2px solid $border-color;
+}
+.formsearch {
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.searchbar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    justify-content: center;
+    padding-right: 0.5rem;
 }
 
 @media (max-width: 1100px) {
