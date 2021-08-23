@@ -1,6 +1,6 @@
 # Startpage
 
-![demo screenshot](https://github.com/mbeckrich/startpage/blob/main/screenshot.png)
+![demo screenshot](https://github.com/mbeckrich/startpages/blob/main/startpage-1/screenshot.png)
 
 A very basic browser startpage I will probably never actually use! There are still some things I would like to add/adjust, though. I worked on this to:
 
