@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 config.js
+=======
+.DS_store
+config.js
+.workspace
+>>>>>>> startpage-2/main

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(2, 3, 3, 0.85);
+  color: #6ed5c9;
+  height: min(8vh, 3rem);
+  margin-top: min(8vh, 3rem);
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 1.5rem clamp(1rem, 5%, 2rem);
+}
+
+.left-col {
+  width: min(60ch, 100% - 2rem);
+  font-family: "Mononoki Nerd Font Mono", Menlo, "Gill Sans", "Segui UI";
+}
+
+.left-col header {
+  font-size: clamp(2.5rem, 6vw + 2rem, 3rem);
+  margin-bottom: 2rem;
+  font-family: "Mononoki Nerd Font Mono", Menlo, "Gill Sans", "Segui UI";
+}
+
+.left-col nav,
+.left-col h2.social {
+  display: inline-flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+h2.social {
+  margin-bottom: 0.8rem;
+}
+
+h2.news {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+a {
+  color: #9deab1;
+  padding-left: 2rem;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #fce49c;
+  text-decoration: none;
+}
+
+.right-col > img {
+  box-shadow: 0 0 20px rgba(2, 3, 3, 0.85);
+}
+
+i {
+  font-size: 1rem;
+  padding: 0.2rem;
+  color: rgba(2, 3, 3, 0.85);
+  border-bottom: 2px solid #9cfcf1;
+}
+
+i:hover,
+i:focus {
+  border-color: transparent;
+  color: #9deab1;
+}
+
+.formsearch::placeholder {
+  font-family: "Gill Sans";
+  font-size: 1rem;
+  color: rgba(2, 3, 3, 0.85);
+}
+
+.formsearch:focus {
+  outline: none;
+}
+
+#googleValue {
+  border: 2px solid #9cfcf1;
+}
+
+.formsearch {
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.searchbar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  justify-content: center;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .main {
+    display: inline-block;
+  }
+
+  .left-col {
+    margin-bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
